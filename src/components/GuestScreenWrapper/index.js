@@ -36,7 +36,9 @@ const styles = StyleSheet.create({
 		marginTop: headerHeight - 50,
 		borderTopLeftRadius: 24,
 		borderTopRightRadius: 24,
-		backgroundColor: "#fff"
+		backgroundColor: "#fff",
+		paddingHorizontal: 16,
+		paddingVertical: 29
 	}
 });
 
