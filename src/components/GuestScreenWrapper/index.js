@@ -12,7 +12,7 @@ const GuestScreenWrapper = ({ children }) => {
 				<Image source={require("../../images/logos/jadou.png")} style={styles.logo} />
 			</View>
 			<View style={styles.contentContainer}>
-				<ScrollView>
+				<ScrollView showsVerticalScrollIndicator={false}>
 					{children}
 				</ScrollView>
 			</View>
