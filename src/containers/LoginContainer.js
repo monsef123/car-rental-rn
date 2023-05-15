@@ -6,6 +6,7 @@ import { View, TextInput } from "react-native";
 import strings from "../common/strings";
 import SelectDropdown from 'react-native-select-dropdown'
 import colors from "../common/colors";
+import ContainedButton from "../components/ContainedButton";
 
 const countries = ["+212"]
 
@@ -15,30 +16,36 @@ const LoginContainer = () => {
 		<GuestScreenWrapper>
 			<Text variant="bodyLarge">{strings.enterPhoneNumber}</Text>
 			<View style={styles.inputContainer}>
-			<SelectDropdown
-				data={countries}
-				defaultButtonText="+234"
-				onSelect={(selectedItem, index) => {
-					console.log(selectedItem, index)
-				}}
-				buttonTextAfterSelection={(selectedItem, index) => {
-					// text represented after item is selected
-					// if data array is an array of objects then return selectedItem.property to render after item is selected
-					return selectedItem
-				}}
-				rowTextForSelection={(item, index) => {
-					// text represented for each item in dropdown
-					// if data array is an array of objects then return item.property to represent item in dropdown
-					return item
-				}}
-				buttonStyle={styles.selectBtn}
-				buttonTextStyle={styles.selectBtnText}
-			/>
-			<TextInput 
-				style={styles.phoneInput}
-				placeholder={strings.phoneInputPlaceholder}
-			/>
+				<SelectDropdown
+					data={countries}
+					defaultButtonText="+234"
+					onSelect={(selectedItem, index) => {
+						console.log(selectedItem, index)
+					}}
+					buttonTextAfterSelection={(selectedItem, index) => {
+						// text represented after item is selected
+						// if data array is an array of objects then return selectedItem.property to render after item is selected
+						return selectedItem
+					}}
+					rowTextForSelection={(item, index) => {
+						// text represented for each item in dropdown
+						// if data array is an array of objects then return item.property to represent item in dropdown
+						return item
+					}}
+					buttonStyle={styles.selectBtn}
+					buttonTextStyle={styles.selectBtnText}
+				/>
+				<TextInput
+					style={styles.phoneInput}
+					placeholder={strings.phoneInputPlaceholder}
+				/>
 			</View>
+			<ContainedButton
+				style={{ marginTop: 24 }}
+				iconName="arrow-right"
+			>
+				Login
+			</ContainedButton>
 		</GuestScreenWrapper>
 	)
 }
