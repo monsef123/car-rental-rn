@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Dimensions, StyleSheet } from 'react-native'
+import { View, Dimensions, StyleSheet, ScrollView } from 'react-native'
 
 const headerHeight = Dimensions.get("window").height / 3;
 
@@ -11,7 +11,9 @@ const GuestScreenWrapper = ({ children }) => {
 
 			</View>
 			<View style={styles.contentContainer}>
-				{children}
+				<ScrollView>
+					{children}
+				</ScrollView>
 			</View>
 		</View>
 	)

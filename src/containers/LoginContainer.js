@@ -7,6 +7,8 @@ import strings from "../common/strings";
 import SelectDropdown from 'react-native-select-dropdown'
 import colors from "../common/colors";
 import ContainedButton from "../components/ContainedButton";
+import Separator from "../components/Separator";
+import SociaLoginButton from "../components/SocialLoginButton";
 
 const countries = ["+212"]
 
@@ -48,6 +50,24 @@ const LoginContainer = () => {
 			>
 				{strings.login}
 			</ContainedButton>
+			<Separator />
+			<SociaLoginButton
+				label={strings.continueWithApple}
+				image={require("../images/icons/apple.png")}
+			/>
+			<View style={{ height: 16 }} />
+			<SociaLoginButton
+				label={strings.continueWithFacebook}
+				image={require("../images/icons/facebook.png")}
+			/>
+			<View style={{ height: 16 }} />
+			<SociaLoginButton
+				label={strings.continueWithGoogle}
+				image={require("../images/icons/google.png")}
+			/>
+			<Text style={styles.termsText} variant="bodyMedium">
+				{strings.termsText}
+			</Text>
 		</GuestScreenWrapper>
 	)
 }
@@ -77,6 +97,10 @@ const styles = StyleSheet.create({
 		flexShrink: 1,
 		marginLeft: 8,
 		borderRadius: 4,
+	},
+	termsText: {
+		marginTop: 16,
+		lineHeight: 18
 	}
 })
 
