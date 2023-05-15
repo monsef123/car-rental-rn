@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Dimensions, StyleSheet, ScrollView } from 'react-native'
+import { View, Dimensions, StyleSheet, ScrollView, Image } from 'react-native'
 
 const headerHeight = Dimensions.get("window").height / 3;
 
@@ -8,7 +8,8 @@ const GuestScreenWrapper = ({ children }) => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.header}>
-
+				<Image source={require("../../images/photos/car-bg.jpeg")} style={styles.bgImage} />
+				<Image source={require("../../images/logos/jadou.png")} style={styles.logo} />
 			</View>
 			<View style={styles.contentContainer}>
 				<ScrollView>
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		top: 0,
 		left: 0,
+		justifyContent: "center"
 	},
 	contentContainer: {
 		width: "100%",
@@ -41,6 +43,19 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fff",
 		paddingHorizontal: 16,
 		paddingVertical: 29
+	},
+	bgImage: {
+		width: "100%",
+		height: "100%",
+		position: "absolute",
+		top: 0,
+		left: 0
+	},
+	logo: {
+		width: 50,
+		height: 50,
+		resizeMode:"contain",
+		marginLeft: 20
 	}
 });
 

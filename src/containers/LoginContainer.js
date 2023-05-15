@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StatusBar, StyleSheet } from "react-native";
 import GuestScreenWrapper from "../components/GuestScreenWrapper";
 import { Text, IconButton } from "react-native-paper";
 import { View, TextInput } from "react-native";
@@ -20,6 +20,7 @@ const LoginContainer = ({
 
 	return (
 		<GuestScreenWrapper>
+			<StatusBar barStyle="light-content" />
 			<Text variant="bodyLarge">{strings.enterPhoneNumber}</Text>
 			<View style={styles.inputContainer}>
 				<SelectDropdown
