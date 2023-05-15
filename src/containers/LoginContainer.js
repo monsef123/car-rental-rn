@@ -38,13 +38,15 @@ const LoginContainer = () => {
 				<TextInput
 					style={styles.phoneInput}
 					placeholder={strings.phoneInputPlaceholder}
+					keyboardType="phone-pad"
+					returnKeyType="done"
 				/>
 			</View>
 			<ContainedButton
 				style={{ marginTop: 24 }}
 				iconName="arrow-right"
 			>
-				Login
+				{strings.login}
 			</ContainedButton>
 		</GuestScreenWrapper>
 	)
