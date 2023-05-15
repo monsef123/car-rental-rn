@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
 		borderRadius: 50
 	},
 	label: {
-		fontSize: 16
+		fontSize: 16,
+		fontWeight: "400"
 	},
 	content: {
 		flexDirection: 'row-reverse'

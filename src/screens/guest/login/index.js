@@ -1,10 +1,16 @@
-import React from "react";
-import { Text } from "react-native-paper";
+import React, { useState } from "react";
+// import { Text } from "react-native-paper";
 import LoginContainer from "../../../containers/LoginContainer";
+
+
 const LoginScreen = () => {
+	const [phone, setPhone] = useState("");
 
 	return (
-		<LoginContainer />
+		<LoginContainer
+			phone={phone}
+			setPhone={setPhone}
+		/>
 	)
 }
 

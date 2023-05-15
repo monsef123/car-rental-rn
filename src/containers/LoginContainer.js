@@ -11,9 +11,12 @@ import Separator from "../components/Separator";
 import SociaLoginButton from "../components/SocialLoginButton";
 import BigIconButton from "../components/BigIconButton";
 
-const countries = ["+212"]
+const countries = ["+212"];
 
-const LoginContainer = () => {
+const LoginContainer = ({
+	phone,
+	setPhone
+}) => {
 
 	return (
 		<GuestScreenWrapper>
@@ -39,6 +42,9 @@ const LoginContainer = () => {
 					buttonTextStyle={styles.selectBtnText}
 				/>
 				<TextInput
+					value={phone}
+					onChangeText={setPhone}
+					maxLength={16}
 					style={styles.phoneInput}
 					placeholder={strings.phoneInputPlaceholder}
 					keyboardType="phone-pad"
@@ -48,6 +54,7 @@ const LoginContainer = () => {
 			<ContainedButton
 				style={{ marginTop: 24 }}
 				iconName="arrow-right"
+				disabled={!phone}
 			>
 				{strings.login}
 			</ContainedButton>
@@ -69,9 +76,9 @@ const LoginContainer = () => {
 			<Text style={styles.termsText} variant="bodyMedium">
 				{strings.termsText}
 			</Text>
-			<BigIconButton 
+			<BigIconButton
 				iconName="arrow-left"
-				style={{marginTop: 22}}
+				style={{ marginTop: 22 }}
 			/>
 		</GuestScreenWrapper>
 	)
