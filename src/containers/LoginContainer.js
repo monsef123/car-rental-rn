@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import GuestScreenWrapper from "../components/GuestScreenWrapper";
-import { Text } from "react-native-paper";
+import { Text, IconButton } from "react-native-paper";
 import { View, TextInput } from "react-native";
 import strings from "../common/strings";
 import SelectDropdown from 'react-native-select-dropdown'
@@ -9,6 +9,7 @@ import colors from "../common/colors";
 import ContainedButton from "../components/ContainedButton";
 import Separator from "../components/Separator";
 import SociaLoginButton from "../components/SocialLoginButton";
+import BigIconButton from "../components/BigIconButton";
 
 const countries = ["+212"]
 
@@ -68,6 +69,10 @@ const LoginContainer = () => {
 			<Text style={styles.termsText} variant="bodyMedium">
 				{strings.termsText}
 			</Text>
+			<BigIconButton 
+				iconName="arrow-left"
+				style={{marginTop: 22}}
+			/>
 		</GuestScreenWrapper>
 	)
 }
