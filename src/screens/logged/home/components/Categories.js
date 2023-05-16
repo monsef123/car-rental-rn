@@ -37,7 +37,7 @@ const HomeCategories = () => {
 
 const styles = StyleSheet.create({
 	scrollView: {
-		marginTop: 16,
+		marginVertical: 16,
 		height: "auto"
 	}
 });

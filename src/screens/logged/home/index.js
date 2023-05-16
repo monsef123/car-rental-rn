@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyleSheet, ScrollView } from 'react-native'
-import { Text } from 'react-native-paper'
+import { View, StyleSheet, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import SearchBtn from './components/SearchBtn'
 import colors from '../../../common/colors'
 import HomeCategories from './components/Categories'
+import CarCard from '../../../components/CarCard'
 
 const HomeScreen = () => {
 
@@ -13,6 +13,9 @@ const HomeScreen = () => {
 			<SafeAreaView style={styles.container}>
 				<SearchBtn />
 				<HomeCategories />
+				<View style={styles.carsContainer}>
+					<CarCard />
+				</View>
 			</SafeAreaView>
 		</ScrollView>
 	)
@@ -27,6 +30,9 @@ const styles = StyleSheet.create({
 		flex: 1,
 		paddingHorizontal: 18,
 		backgroundColor: colors.secondarySurface
+	},
+	carsContainer: {
+		width: "100%"
 	}
 });
 
