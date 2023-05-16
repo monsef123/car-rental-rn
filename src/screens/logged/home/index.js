@@ -4,6 +4,7 @@ import { Text } from 'react-native-paper'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import SearchBtn from './components/SearchBtn'
 import colors from '../../../common/colors'
+import HomeCategories from './components/Categories'
 
 const HomeScreen = () => {
 
@@ -11,6 +12,7 @@ const HomeScreen = () => {
 		<ScrollView contentContainerStyle={styles.scrollView}>
 			<SafeAreaView style={styles.container}>
 				<SearchBtn />
+				<HomeCategories />
 			</SafeAreaView>
 		</ScrollView>
 	)
