@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import LoginContainer from "../../../containers/LoginContainer";
 
-
 const LoginScreen = ({ navigation }) => {
 	const [phone, setPhone] = useState("");
 
