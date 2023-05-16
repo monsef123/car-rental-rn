@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { Button } from 'react-native-paper'
+import colors from '../../common/colors'
 
 const ContainedButton = ({ iconName, children, onPress, style, disabled }) => {
 
@@ -13,6 +14,7 @@ const ContainedButton = ({ iconName, children, onPress, style, disabled }) => {
 			style={[styles.btn, style]}
 			contentStyle={styles.content}
 			labelStyle={styles.label}
+			rippleColor={colors.inputGray}
 		>
 			{children}
 		</Button>
