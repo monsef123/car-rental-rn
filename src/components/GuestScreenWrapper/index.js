@@ -12,7 +12,7 @@ const GuestScreenWrapper = ({ children }) => {
 				<Image source={require("../../images/logos/jadou.png")} style={styles.logo} />
 			</View>
 			<View style={styles.contentContainer}>
-				<ScrollView showsVerticalScrollIndicator={false}>
+				<ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ flexGrow: 1 }}>
 					{children}
 				</ScrollView>
 			</View>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
 	logo: {
 		width: 50,
 		height: 50,
-		resizeMode:"contain",
+		resizeMode: "contain",
 		marginLeft: 20
 	}
 });

@@ -7,6 +7,9 @@ const strings = {
 	continueWithFacebook: "Continuer avec Facebook",
 	continueWithGoogle: "Continuer avec Google",
 	termsText: "En vous connectant, il est entendu que vous reconnaissez et acceptez les termes et conditions générales d'utilisation.",
+	enterOtpSentTo: (phone) => `Saisissez le code envoyé à votre numéro ${phone.substring(0, 4)}*****`,
+	confirm: "Confirmer",
+	otpNotReceived: "J’ai pas reçu le code"
 }
 
 export default strings;
