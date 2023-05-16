@@ -15,8 +15,13 @@ const countries = ["+212"];
 
 const LoginContainer = ({
 	phone,
-	setPhone
+	setPhone,
+	navigation
 }) => {
+
+	const onLogin = () => {
+		navigation.navigate("LoginOtp");
+	}
 
 	return (
 		<GuestScreenWrapper>
@@ -56,6 +61,7 @@ const LoginContainer = ({
 				style={{ marginTop: 24 }}
 				iconName="arrow-right"
 				disabled={!phone}
+				onPress={onLogin}
 			>
 				{strings.login}
 			</ContainedButton>
