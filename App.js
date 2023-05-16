@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import GuestNavigation from './src/navigation/guest';
+import Navigation from './src/navigation';
 import { MD3LightTheme as DefaultTheme, ThemeProvider } from 'react-native-paper';
 import colors from './src/common/colors';
 
@@ -17,7 +17,7 @@ const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
 			<NavigationContainer>
-				<GuestNavigation />
+				<Navigation />
 			</NavigationContainer>
 		</ThemeProvider>
 	);

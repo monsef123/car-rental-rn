@@ -18,7 +18,7 @@ const SociaLoginButton = ({ label, image, containerStyle }) => {
 const styles = StyleSheet.create({
 	container: {
 		width: "100%",
-		backgroundColor: colors.socialLoginBg,
+		backgroundColor: colors.secondarySurface,
 		padding: 14,
 		borderRadius: 8,
 		flexDirection: "row",

@@ -4,8 +4,10 @@ const colors = {
 	primary: "#0E0F0C",
 	stroke: "#AAAAAA",
 	separatorText: "#6A6C6A",
-	socialLoginBg: "#FAFAFA",
-	bigIconBtn: "#F5F5F5"
+	secondarySurface: "#FAFAFA",
+	bigIconBtn: "#F5F5F5",
+	white: "#FFFFFF",
+	textBlack: "#111111"
 }
 
 export default colors;
