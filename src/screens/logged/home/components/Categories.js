@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, ScrollView } from 'react-native'
+import { View, StyleSheet, ScrollView } from 'react-native'
 import { Button } from 'react-native-paper'
 
 const CategoryItem = ({ label, onPress }) => {
@@ -13,23 +13,25 @@ const CategoryItem = ({ label, onPress }) => {
 const HomeCategories = () => {
 
 	return (
-		<ScrollView horizontal style={styles.scrollView} contentContainerStyle={{height: "auto"}}>
-			<CategoryItem
-				label="Family cars"
-			/>
-			<CategoryItem
-				label="Luxury cars"
-			/>
-			<CategoryItem
-				label="SUV"
-			/>
-			<CategoryItem
-				label="Electric"
-			/>
-			<CategoryItem
-				label="Luxury cars"
-			/>
-		</ScrollView>
+		<View>
+			<ScrollView horizontal style={styles.scrollView} showsHorizontalScrollIndicator={false}>
+				<CategoryItem
+					label="Family cars"
+				/>
+				<CategoryItem
+					label="Luxury cars"
+				/>
+				<CategoryItem
+					label="SUV"
+				/>
+				<CategoryItem
+					label="Electric"
+				/>
+				<CategoryItem
+					label="Luxury cars"
+				/>
+			</ScrollView>
+		</View>
 	)
 }
 
