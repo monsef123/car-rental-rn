@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Text } from "react-native-paper";
 import LoginContainer from "../../../containers/LoginContainer";
 
 
