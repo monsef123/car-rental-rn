@@ -4,16 +4,23 @@ import { IconButton, Text, TouchableRipple } from 'react-native-paper';
 import colors from '../../common/colors';
 
 
-const CarCard = () => {
+const CarCard = ({
+	image,
+	title,
+	rating,
+	trips,
+	price,
+	pricePerDay
+}) => {
 
 	return (
 		<TouchableRipple>
 			<View style={styles.container}>
 				<View style={styles.imgContainer}>
-					<Image source={require("../../images/cars/car1.png")} style={styles.carImg} />
+					<Image source={image} style={styles.carImg} />
 				</View>
 				<View style={styles.row}>
-					<Text variant="bodyLarge" style={styles.carName}>Honda Odyssey 2019</Text>
+					<Text variant="bodyLarge" style={styles.carName}>{title}</Text>
 					<IconButton
 						icon="bookmark-outline"
 						style={{ width: 22 }}
@@ -21,17 +28,17 @@ const CarCard = () => {
 					/>
 				</View>
 				<View style={[styles.row, { justifyContent: "flex-start" }]}>
-					<Text variant="bodyLarge" style={{ lineHeight: 16 }}>5.0</Text>
+					<Text variant="bodyLarge" style={{ lineHeight: 16 }}>{rating}</Text>
 					<IconButton
 						icon="star-outline"
 						style={styles.starIconBtn}
 						iconColor={colors.textBlack}
 					/>
-					<Text variant="bodyLarge" style={{ lineHeight: 16 }}>(16 voyage)</Text>
+					<Text variant="bodyLarge" style={{ lineHeight: 16 }}>({trips} voyage)</Text>
 				</View>
 				<View style={[styles.row, { marginTop: 16 }]}>
-					<Text variant="bodySmall" style={styles.captionText}>300 Dhs / jours</Text>
-					<Text variant="bodyLarge" style={styles.carName}>1.090 Dhs</Text>
+					<Text variant="bodySmall" style={styles.captionText}>{pricePerDay} Dhs / jours</Text>
+					<Text variant="bodyLarge" style={styles.carName}>{price} Dhs</Text>
 				</View>
 			</View>
 		</TouchableRipple >

@@ -14,7 +14,30 @@ const HomeScreen = () => {
 				<SearchBtn />
 				<HomeCategories />
 				<View style={styles.carsContainer}>
-					<CarCard />
+					<CarCard
+						image={require("../../../images/cars/car1.png")}
+						title="Honda Odyssey 2019"
+						rating="5.0"
+						trips="16"
+						price="1.090"
+						pricePerDay="300"
+					/>
+					<CarCard
+						image={require("../../../images/cars/car2.png")}
+						title="Mercedes CLA 22"
+						rating="5.0"
+						trips="16"
+						price="1.090"
+						pricePerDay="300"
+					/>
+					<CarCard
+						image={require("../../../images/cars/car1.png")}
+						title="Honda Odyssey 2019"
+						rating="5.0"
+						trips="16"
+						price="1.090"
+						pricePerDay="300"
+					/>
 				</View>
 			</SafeAreaView>
 		</ScrollView>
