@@ -68,6 +68,9 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "center",
 		backgroundColor: "transaprent",
+		position: "absolute",
+		bottom: 0,
+		width: "100%",
 		paddingHorizontal: 20,
 		paddingBottom: Platform.OS === "android" ? 20 : 0
 	},
