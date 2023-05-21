@@ -7,7 +7,8 @@ const colors = {
 	secondarySurface: "#FAFAFA",
 	bigIconBtn: "#F5F5F5",
 	white: "#FFFFFF",
-	textBlack: "#111111"
+	textBlack: "#111111",
+	lighGray: "#EEEEEE"
 }
 
 export default colors;
