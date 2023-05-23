@@ -6,12 +6,14 @@ import colors from '../../../common/colors'
 import HomeCategories from './components/Categories'
 import CarCard from '../../../components/CarCard'
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
 
 	return (
 		<ScrollView contentContainerStyle={styles.scrollView}>
 			<SafeAreaView style={styles.container}>
-				<SearchBtn />
+				<SearchBtn
+					onPress={() => navigation.navigate("Search")}
+				/>
 				<HomeCategories />
 				<View style={styles.carsContainer}>
 					<CarCard

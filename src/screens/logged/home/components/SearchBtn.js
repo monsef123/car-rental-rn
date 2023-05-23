@@ -5,10 +5,10 @@ import colors from '../../../../common/colors';
 import { Text } from 'react-native-paper';
 import strings from '../../../../common/strings';
 
-const SearchBtn = () => {
+const SearchBtn = ({ onPress }) => {
 
 	return (
-		<TouchableRipple style={{ marginTop: 20 }}>
+		<TouchableRipple style={{ marginTop: 20 }} onPress={onPress}>
 			<View style={styles.container}>
 				<Text variant="bodyLarge" style={styles.text}>{strings.search}</Text>
 			</View>
