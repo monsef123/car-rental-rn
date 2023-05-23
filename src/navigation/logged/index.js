@@ -1,19 +1,17 @@
 import React from "react";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from "../../screens/logged/home";
+// import HomeScreen from "../../screens/logged/home";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBar from "../components/TabBar";
+import HomeStack from "../stacks/HomeStack";
 
-// const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-
 
 const LoggedNavigation = () => {
 	return (
-		<Tab.Navigator initialRouteName="Home"
+		<Tab.Navigator initialRouteName="tab_home"
 			tabBar={(props) => <TabBar {...props} />}
 		>
-			<Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false, tabBarLabel: "Home" }} />
+			<Tab.Screen name="tab_home" component={HomeStack} options={{ headerShown: false, tabBarLabel: "Home" }} />
 		</Tab.Navigator>
 	);
 }
