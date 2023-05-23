@@ -1,0 +1,4 @@
+export const ORDER_METHODS = {
+	DELIVERY: "DELIVERY",
+	PICK_UP: "PICK_UP"
+}

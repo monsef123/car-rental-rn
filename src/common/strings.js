@@ -11,6 +11,10 @@ const strings = {
 	confirm: "Confirmer",
 	otpNotReceived: "J’ai pas reçu le code",
 	search: "Recherche",
+	recoveryMethod: "Comment souhaitez-vous récupérer votre voiture ?",
+	pickup: "Pick up",
+	delivery: "Delivery",
+	
 }
 
 export default strings;
