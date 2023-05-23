@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import colors from '../../../common/colors';
 import { IconButton, Text } from 'react-native-paper';
+import strings from '../../../common/strings';
 
 
 const SearchScreen = ({ navigation }) => {
@@ -10,12 +11,15 @@ const SearchScreen = ({ navigation }) => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<View style={styles.row}>
-				<Text variant="titleLarge" style={styles.title}>RECHERCHE</Text>
+				<Text variant="titleLarge" style={styles.title}>{strings.search}</Text>
 				<IconButton
 					icon="close"
 					onPress={navigation.goBack}
 				/>
 			</View>
+			<Text variant="bodyLarge" style={styles.question}>
+			Comment souhaitez-vous récupérer votre voiture ?
+			</Text>
 		</SafeAreaView>
 	)
 }
@@ -35,7 +39,12 @@ const styles = StyleSheet.create({
 		paddingVertical: 10
 	},
 	title: {
-		fontWeight: "900"
+		fontWeight: "900",
+		textTransform: "uppercase"
+	},
+	question: {
+		fontWeight: "500",
+		lineHeight: 18
 	}
 });
 
