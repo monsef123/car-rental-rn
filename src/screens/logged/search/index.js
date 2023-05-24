@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import colors from '../../../common/colors';
-import { IconButton, Text, Chip } from 'react-native-paper';
+import { Text, Chip } from 'react-native-paper';
 import strings from '../../../common/strings';
 import { ORDER_METHODS } from '../../../common/constants';
 import MCommunityIcon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -20,15 +20,8 @@ const SearchScreen = ({ navigation }) => {
 
 	return (
 		<SafeAreaView style={styles.container}>
-			{/* <View style={styles.row}>
-				<Text variant="titleLarge" style={styles.title}>{strings.search}</Text>
-				<IconButton
-					icon="close"
-					onPress={navigation.goBack}
-				/>
-			</View> */}
 			<SearchScreenHeader
-				goBack={Navigation.goBack}
+				goBack={navigation.goBack}
 			/>
 			<Text variant="bodyLarge" style={styles.question}>
 				{strings.recoveryMethod}
@@ -80,10 +73,6 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "space-between",
 		paddingVertical: 10
-	},
-	title: {
-		fontWeight: "900",
-		textTransform: "uppercase"
 	},
 	question: {
 		fontWeight: "500",
