@@ -8,7 +8,11 @@ import SimpleInput from '../../../components/SimpleInput'
 import CarCard from '../../../components/CarCard'
 
 const SearchResultScreen = ({ navigation }) => {
-	
+
+	const onCarCardPress = () => {
+		navigation.navigate("search_confirmation");
+	}
+
 	return (
 		<ScrollView
 			contentContainerStyle={styles.scrollView}
@@ -44,6 +48,7 @@ const SearchResultScreen = ({ navigation }) => {
 					trips="16"
 					price="1.090"
 					pricePerDay="300"
+					onPress={onCarCardPress}
 				/>
 				<CarCard
 					image={require("../../../images/cars/car2.png")}
@@ -52,6 +57,7 @@ const SearchResultScreen = ({ navigation }) => {
 					trips="16"
 					price="1.090"
 					pricePerDay="300"
+					onPress={onCarCardPress}
 				/>
 				<CarCard
 					image={require("../../../images/cars/car1.png")}
@@ -60,6 +66,7 @@ const SearchResultScreen = ({ navigation }) => {
 					trips="16"
 					price="1.090"
 					pricePerDay="300"
+					onPress={onCarCardPress}
 				/>
 			</SafeAreaView>
 		</ScrollView>

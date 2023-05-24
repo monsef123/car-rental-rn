@@ -14,7 +14,7 @@ const CarCard = ({
 }) => {
 
 	return (
-		<TouchableRipple onPress={onPress}>
+		<TouchableRipple onPress={onPress} style={{ marginTop: 16 }}>
 			<View style={styles.container}>
 				<View style={styles.imgContainer}>
 					<Image source={image} style={styles.carImg} />
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 	container: {
 		width: "100%",
 		backgroundColor: colors.white,
-		marginTop: 16,
+		// marginTop: 16,
 		borderRadius: 8,
 		padding: 16
 	},
