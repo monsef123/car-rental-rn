@@ -14,7 +14,6 @@ import CarTypeSelector from './components/CarTypeSelector';
 import BigIconButton from '../../../components/BigIconButton';
 
 const SearchScreen = ({ navigation }) => {
-	const tabBarHeight = 0;
 	const [method, setMethod] = useState(ORDER_METHODS.DELIVERY);
 	const [carTypes, setCarTypes] = useState([]);
 
