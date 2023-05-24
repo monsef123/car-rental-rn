@@ -10,8 +10,11 @@ import SearchScreenMethodSelector from './components/MethodSelector';
 import LineSeparator from '../../../components/LineSeparator';
 import SimpleInput from '../../../components/SimpleInput';
 import OptionSlider from './components/OptionsSlider';
+import CarTypeSelector from './components/CarTypeSelector';
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 
 const SearchScreen = ({ navigation }) => {
+	const tabBarHeight = useBottomTabBarHeight();
 	const [method, setMethod] = useState(ORDER_METHODS.DELIVERY);
 
 	const onMethodPress = (value) => {
@@ -22,7 +25,7 @@ const SearchScreen = ({ navigation }) => {
 
 	return (
 		<ScrollView
-			contentContainerStyle={styles.scrollView}
+			contentContainerStyle={[styles.scrollView, {paddingBottom: tabBarHeight}]}
 			bounces={false}
 			showsVerticalScrollIndicator={false}
 		>
@@ -40,7 +43,9 @@ const SearchScreen = ({ navigation }) => {
 					method={method}
 					onMethodPress={onMethodPress}
 				/>
+				{/** Separator */}
 				<LineSeparator />
+				{/** Basic form */}
 				<SimpleInput
 					placeholder="Trademark"
 				/>
@@ -59,8 +64,13 @@ const SearchScreen = ({ navigation }) => {
 					label="Lieu de prise en charge et de retour"
 					placeholder="Gauthier, NO92 Casablanca"
 				/>
+				{/** Car options slider */}
 				<OptionSlider 
 					label="Niveau mécanique"
+				/>
+				{/** Car type selector */}
+				<CarTypeSelector 
+					label="Quel type de voiture souhaitez-vous ?"
 				/>
 			</SafeAreaView>
 		</ScrollView>
@@ -70,7 +80,8 @@ const SearchScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
 	scrollView: {
 		width: "100%",
-		flexGrow: 1
+		flexGrow: 1,
+		backgroundColor: colors.white
 	},
 	container: {
 		width: "100%",
