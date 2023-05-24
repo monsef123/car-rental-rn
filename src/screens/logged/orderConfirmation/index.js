@@ -1,9 +1,10 @@
 import React from 'react'
-import { StyleSheet, ScrollView, View } from 'react-native'
+import { StyleSheet, ScrollView, View, Image } from 'react-native'
 import HeaderWithBack from '../../../components/HeaderWithBack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import colors from '../../../common/colors';
 import HostDetails from './components/HostDetails';
+import { Text } from 'react-native-paper';
 
 const OrderConfirmation = ({ navigation }) => {
 
@@ -21,7 +22,8 @@ const OrderConfirmation = ({ navigation }) => {
 				<HostDetails />
 			</SafeAreaView>
 			<View style={styles.carDetailsContainer}>
-
+				<Text variant="bodyLarge" style={styles.carTitle}>HONDA ODYSSEY 2019</Text>
+				<Image source={require("../../../images/cars/car1.png")} style={styles.carImg} />
 			</View>
 		</ScrollView>
 	)
@@ -42,11 +44,20 @@ const styles = StyleSheet.create({
 	},
 	carDetailsContainer: {
 		width: "100%",
-		// marginTop: 24,
 		borderTopLeftRadius: 32,
 		borderTopRightRadius: 32,
+		paddingTop: 16,
 		flex: 1,
 		backgroundColor: colors.secondarySurface
+	},
+	carTitle: {
+		textAlign: "center",
+	},
+	carImg: {
+		alignSelf: "center",
+		marginTop: 30,
+		width: "50%",
+		resizeMode: "contain"
 	}
 });
 
