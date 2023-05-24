@@ -8,7 +8,7 @@ import SimpleInput from '../../../components/SimpleInput'
 import CarCard from '../../../components/CarCard'
 
 const SearchResultScreen = ({ navigation }) => {
-
+	
 	return (
 		<ScrollView
 			contentContainerStyle={styles.scrollView}
