@@ -35,6 +35,12 @@ const SearchScreen = ({ navigation }) => {
 		setCarTypes(newCarTypes);
 	}
 
+	{/** Func: Handles submitting the search form */ }
+	const onSubmitSearch = () => {
+		// TODO: Add validation logic here
+		navigation.navigate("search_result");
+	}
+
 	return (
 		<>
 			<ScrollView
@@ -95,6 +101,7 @@ const SearchScreen = ({ navigation }) => {
 				style={styles.nextBtn}
 				iconColor={colors.white}
 				containerColor={colors.textBlack}
+				onPress={onSubmitSearch}
 			/>
 		</>
 	)

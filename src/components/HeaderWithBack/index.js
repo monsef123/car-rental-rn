@@ -1,14 +1,16 @@
 import React from 'react'
-import { StyleSheet, Pressable } from 'react-native'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import { Text } from 'react-native-paper';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const HeaderWithBack = ({ goBack, title }) => {
 	return (
-		<Pressable style={styles.container} onPress={goBack}>
-			<Icon name="chevron-left" size={40} style={styles.icon} />
-			<Text variant="titleLarge" style={styles.title}>{title}</Text>
-		</Pressable>
+		<TouchableOpacity onPress={goBack}>
+			<View style={styles.container}>
+				<Icon name="chevron-left" size={40} style={styles.icon} />
+				<Text variant="titleLarge" style={styles.title}>{title}</Text>
+			</View>
+		</TouchableOpacity>
 	)
 }
 

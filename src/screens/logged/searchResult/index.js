@@ -17,7 +17,7 @@ const SearchResultScreen = ({ navigation }) => {
 		>
 			<SafeAreaView style={styles.container}>
 				<HeaderWithBack
-					goBack={navigation.goback}
+					goBack={navigation.goBack}
 					title={strings.result}
 				/>
 				<View style={styles.row}>
