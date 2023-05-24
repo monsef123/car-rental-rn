@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import { StatusBar, StyleSheet, TouchableOpacity } from "react-native";
 import GuestScreenWrapper from "../../../components/GuestScreenWrapper";
-import { Text, IconButton } from "react-native-paper";
+import { Text } from "react-native-paper";
 import { View, TextInput } from "react-native";
 import strings from "../../../common/strings";
-import SelectDropdown from 'react-native-select-dropdown'
 import colors from "../../../common/colors";
 import ContainedButton from "../../../components/ContainedButton";
-import Separator from "../../../components/Separator";
-import SociaLoginButton from "../../../components/SocialLoginButton";
 import BigIconButton from "../../../components/BigIconButton";
-
-const countries = ["+212"];
 
 const LoginOtp = ({ navigation }) => {
 	const [otp, setOtp] = useState("");
