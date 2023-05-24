@@ -5,11 +5,17 @@ import SearchBtn from './components/SearchBtn'
 import colors from '../../../common/colors'
 import HomeCategories from './components/Categories'
 import CarCard from '../../../components/CarCard'
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs'
 
 const HomeScreen = ({ navigation }) => {
+	const tabBarHeight = useBottomTabBarHeight();
 
 	return (
-		<ScrollView contentContainerStyle={styles.scrollView}>
+		<ScrollView
+			contentContainerStyle={[styles.scrollView, { paddingBottom: tabBarHeight }]}
+			bounces={false}
+			showsVerticalScrollIndicator={false
+			}>
 			<SafeAreaView style={styles.container}>
 				<SearchBtn
 					onPress={() => navigation.navigate("Search")}

@@ -6,6 +6,8 @@ import { IconButton, Text, Chip } from 'react-native-paper';
 import strings from '../../../common/strings';
 import { ORDER_METHODS } from '../../../common/constants';
 import MCommunityIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import SearchScreenHeader from './components/Header';
+import Navigation from '../../../navigation';
 
 const SearchScreen = ({ navigation }) => {
 	const [method, setMethod] = useState(ORDER_METHODS.DELIVERY);
@@ -18,13 +20,16 @@ const SearchScreen = ({ navigation }) => {
 
 	return (
 		<SafeAreaView style={styles.container}>
-			<View style={styles.row}>
+			{/* <View style={styles.row}>
 				<Text variant="titleLarge" style={styles.title}>{strings.search}</Text>
 				<IconButton
 					icon="close"
 					onPress={navigation.goBack}
 				/>
-			</View>
+			</View> */}
+			<SearchScreenHeader
+				goBack={Navigation.goBack}
+			/>
 			<Text variant="bodyLarge" style={styles.question}>
 				{strings.recoveryMethod}
 			</Text>
