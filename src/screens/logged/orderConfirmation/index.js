@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
 		borderTopLeftRadius: 32,
 		borderTopRightRadius: 32,
 		flex: 1,
-		backgroundColor: colors.white
+		backgroundColor: colors.secondarySurface
 	}
 });
 
