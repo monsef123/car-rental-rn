@@ -15,6 +15,12 @@ const strings = {
 	pickup: "Pick up",
 	delivery: "Delivery",
 	result: "RÉSULTATS",
+	trademark: "Trademark",
+	startDate: "Date de début",
+	endDate: "Date de fin",
+	returnLocation: "Lieu de prise en charge et de retour",
+	mechanicLevel: "Niveau mécanique",
+	vehiculeTypeQuestion: "Quel type de voiture souhaitez-vous ?"
 }
 
 export default strings;

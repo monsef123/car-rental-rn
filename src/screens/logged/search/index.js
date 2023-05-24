@@ -66,30 +66,30 @@ const SearchScreen = ({ navigation }) => {
 					<LineSeparator />
 					{/** Basic form */}
 					<SimpleInput
-						placeholder="Trademark"
+						placeholder={strings.trademark}
 					/>
 					<SimpleInput
 						style={{ marginTop: 16 }}
-						label="Date de début"
+						label={strings.startDate}
 						placeholder="13/12/2023"
 					/>
 					<SimpleInput
 						style={{ marginTop: 16 }}
-						label="Date de fin"
+						label={strings.endDate}
 						placeholder="13/12/2023"
 					/>
 					<SimpleInput
 						style={{ marginTop: 16 }}
-						label="Lieu de prise en charge et de retour"
+						label={strings.returnLocation}
 						placeholder="Gauthier, NO92 Casablanca"
 					/>
 					{/** Car options slider */}
 					<OptionSlider
-						label="Niveau mécanique"
+						label={strings.mechanicLevel}
 					/>
 					{/** Car type selector */}
 					<CarTypeSelector
-						label="Quel type de voiture souhaitez-vous ?"
+						label={strings.vehiculeTypeQuestion}
 						carTypes={carTypes}
 						onCheckboxPress={onCarTypeCheckboxPress}
 					/>
