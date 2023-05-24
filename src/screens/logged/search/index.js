@@ -9,6 +9,7 @@ import SearchScreenHeader from './components/Header';
 import SearchScreenMethodSelector from './components/MethodSelector';
 import LineSeparator from '../../../components/LineSeparator';
 import SimpleInput from '../../../components/SimpleInput';
+import OptionSlider from './components/OptionsSlider';
 
 const SearchScreen = ({ navigation }) => {
 	const [method, setMethod] = useState(ORDER_METHODS.DELIVERY);
@@ -57,6 +58,9 @@ const SearchScreen = ({ navigation }) => {
 					style={{ marginTop: 16 }}
 					label="Lieu de prise en charge et de retour"
 					placeholder="Gauthier, NO92 Casablanca"
+				/>
+				<OptionSlider 
+					label="Niveau mécanique"
 				/>
 			</SafeAreaView>
 		</ScrollView>
