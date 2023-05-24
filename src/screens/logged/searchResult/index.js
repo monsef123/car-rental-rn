@@ -5,6 +5,7 @@ import colors from '../../../common/colors'
 import HeaderWithBack from '../../../components/HeaderWithBack'
 import strings from '../../../common/strings'
 import SimpleInput from '../../../components/SimpleInput'
+import CarCard from '../../../components/CarCard'
 
 const SearchResultScreen = ({ navigation }) => {
 
@@ -36,6 +37,30 @@ const SearchResultScreen = ({ navigation }) => {
 						/>
 					</View>
 				</View>
+				<CarCard
+					image={require("../../../images/cars/car1.png")}
+					title="Honda Odyssey 2019"
+					rating="5.0"
+					trips="16"
+					price="1.090"
+					pricePerDay="300"
+				/>
+				<CarCard
+					image={require("../../../images/cars/car2.png")}
+					title="Mercedes CLA 22"
+					rating="5.0"
+					trips="16"
+					price="1.090"
+					pricePerDay="300"
+				/>
+				<CarCard
+					image={require("../../../images/cars/car1.png")}
+					title="Honda Odyssey 2019"
+					rating="5.0"
+					trips="16"
+					price="1.090"
+					pricePerDay="300"
+				/>
 			</SafeAreaView>
 		</ScrollView>
 	)
