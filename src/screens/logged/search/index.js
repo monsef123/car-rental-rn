@@ -89,6 +89,7 @@ const SearchScreen = ({ navigation }) => {
 					/>
 				</SafeAreaView>
 			</ScrollView>
+			{/** Validate button */}
 			<BigIconButton
 				iconName="arrow-right"
 				style={styles.nextBtn}
