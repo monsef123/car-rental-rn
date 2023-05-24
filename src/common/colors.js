@@ -8,7 +8,8 @@ const colors = {
 	bigIconBtn: "#F5F5F5",
 	white: "#FFFFFF",
 	textBlack: "#111111",
-	lighGray: "#EEEEEE"
+	lighGray: "#EEEEEE",
+	brightGreen: "#AFE67F"
 }
 
 export default colors;
