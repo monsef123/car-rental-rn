@@ -33,10 +33,13 @@ const OrderConfirmation = ({ navigation }) => {
 							/>
 							<Text variant="bodySmall" style={{ lineHeight: 16 }}>(705 trips)</Text>
 						</View>
-						<Text variant="labelMedium" style={{fontWeight: "300"}}>Typically responds within 1 minute</Text>
+						<Text variant="labelMedium" style={{ fontWeight: "300" }}>Typically responds within 1 minute</Text>
 					</View>
 				</View>
 			</SafeAreaView>
+			<View style={styles.carDetailsContainer}>
+
+			</View>
 		</ScrollView>
 	)
 }
@@ -46,15 +49,16 @@ const styles = StyleSheet.create({
 		width: "100%",
 		flexGrow: 1,
 		backgroundColor: colors.lighGray,
-		paddingBottom: 40
+		// paddingBottom: 40
 	},
 	container: {
 		width: "100%",
-		flex: 1,
+		// flex: 1,
 		paddingHorizontal: 18,
 		backgroundColor: colors.lighGray
 	},
 	row: {
+		// paddingHorizontal: 18,
 		marginTop: 10,
 		flexDirection: "row",
 		alignItems: "center",
@@ -76,6 +80,14 @@ const styles = StyleSheet.create({
 		position: "relative",
 		// top: -2
 	},
+	carDetailsContainer: {
+		width: "100%",
+		// marginTop: 24,
+		borderTopLeftRadius: 32,
+		borderTopRightRadius: 32,
+		flex: 1,
+		backgroundColor: colors.white
+	}
 });
 
 export default OrderConfirmation
