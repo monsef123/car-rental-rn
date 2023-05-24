@@ -14,7 +14,7 @@ const strings = {
 	recoveryMethod: "Comment souhaitez-vous récupérer votre voiture ?",
 	pickup: "Pick up",
 	delivery: "Delivery",
-	
+	result: "RÉSULTATS",
 }
 
 export default strings;

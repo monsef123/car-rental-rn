@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBar from "../components/TabBar";
 import HomeStack from "../stacks/HomeStack";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import SearchScreen from "../../screens/logged/search";
+import SearchStack from "../stacks/SearchStack";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -23,7 +23,7 @@ const LoggedNavigation = () => {
 	return (
 		<Stack.Navigator>
 			<Stack.Screen name="Home_Screen" component={TabNavigation} options={{ headerShown: false }} />
-			<Stack.Screen name="Search" component={SearchScreen} options={{ headerShown: false }} />
+			<Stack.Screen name="Search" component={SearchStack} options={{ headerShown: false }} />
 		</Stack.Navigator>
 	)
 }
