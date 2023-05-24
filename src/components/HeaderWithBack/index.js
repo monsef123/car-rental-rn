@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import { IconButton, Text } from 'react-native-paper';
-import strings from '../../common/strings';
 
 const HeaderWithBack = ({ goBack, title }) => {
 	return (
