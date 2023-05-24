@@ -1,9 +1,10 @@
 import React from 'react'
-import { ScrollView, StyleSheet } from 'react-native'
+import { ScrollView, StyleSheet, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import colors from '../../../common/colors'
 import HeaderWithBack from '../../../components/HeaderWithBack'
 import strings from '../../../common/strings'
+import SimpleInput from '../../../components/SimpleInput'
 
 const SearchResultScreen = ({ navigation }) => {
 
@@ -18,7 +19,23 @@ const SearchResultScreen = ({ navigation }) => {
 					goBack={navigation.goback}
 					title={strings.result}
 				/>
-
+				<View style={styles.row}>
+					<View style={{ width: '100%', flexShrink: 1 }}>
+						<SimpleInput
+							style={{ marginTop: 16 }}
+							label="Date de début"
+							placeholder="13/12/2023"
+						/>
+					</View>
+					<View style={{ width: 16 }} />
+					<View style={{ width: '100%', flexShrink: 1 }}>
+						<SimpleInput
+							style={{ marginTop: 16 }}
+							label="Date de fin"
+							placeholder="13/12/2023"
+						/>
+					</View>
+				</View>
 			</SafeAreaView>
 		</ScrollView>
 	)
@@ -37,6 +54,12 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 18,
 		backgroundColor: colors.white
 	},
+	row: {
+		width: "100%",
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "space-between"
+	}
 });
 
 export default SearchResultScreen

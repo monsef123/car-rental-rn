@@ -1,18 +1,14 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
-import { IconButton, Text } from 'react-native-paper';
+import { StyleSheet, Pressable } from 'react-native'
+import { Text } from 'react-native-paper';
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const HeaderWithBack = ({ goBack, title }) => {
 	return (
-		<View style={styles.container}>
-			<IconButton
-				icon="chevron-left"
-				onPress={goBack}
-				size={40}
-				style={styles.backBtn}
-			/>
+		<Pressable style={styles.container} onPress={goBack}>
+			<Icon name="chevron-left" size={40} style={styles.icon} />
 			<Text variant="titleLarge" style={styles.title}>{title}</Text>
-		</View>
+		</Pressable>
 	)
 }
 
@@ -27,11 +23,11 @@ const styles = StyleSheet.create({
 	title: {
 		fontWeight: "900",
 		textTransform: "uppercase",
-		paddingTop: 10
+		paddingTop: 5,
 	},
-	backBtn: {
-		width: 40,
-		height: 40
+	icon: {
+		position: "relative",
+		left: -10
 	}
 });
 
