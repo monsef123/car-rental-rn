@@ -1,13 +1,17 @@
 import React from 'react'
-import { View, Text, StyleSheet, TextInput } from 'react-native'
+import { View, StyleSheet, TextInput } from 'react-native'
+import colors from '../../common/colors';
+import { Text } from 'react-native-paper';
 
-const SimpleInput = () => {
+const SimpleInput = ({ label, placeholder, style }) => {
 
 	return (
-		<View style={styles.container}>
-			<Text>{label}</Text>
+		<View style={[styles.container, style]}>
+			{!!label && <Text variant="labelLarge" style={styles.label}>{label}</Text>}
 			<TextInput
 				style={styles.input}
+				placeholder={placeholder}
+				placeholderTextColor={colors.textOnInput}
 			/>
 		</View>
 	)
@@ -27,11 +31,17 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		paddingHorizontal: 16,
 		color: colors.textBlack,
-		fontWeight: "500"
+		fontWeight: "500",
+		marginTop: 8
 	},
 	text: {
 		color: colors.textBlack,
 		fontWeight: "500"
+	},
+	label: {
+		fontSize: 14,
+		color: "#333",
+		fontWeight: "400"
 	}
 });
 export default SimpleInput
