@@ -1,12 +1,14 @@
 import React from "react";
-// import HomeScreen from "../../screens/logged/home";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBar from "../components/TabBar";
 import HomeStack from "../stacks/HomeStack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import SearchScreen from "../../screens/logged/search";
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
-const LoggedNavigation = () => {
+const TabNavigation = () => {
 	return (
 		<Tab.Navigator initialRouteName="tab_home"
 			tabBar={(props) => <TabBar {...props} />}
@@ -14,6 +16,16 @@ const LoggedNavigation = () => {
 			<Tab.Screen name="tab_home" component={HomeStack} options={{ headerShown: false, tabBarLabel: "Home" }} />
 		</Tab.Navigator>
 	);
+}
+
+
+const LoggedNavigation = () => {
+	return (
+		<Stack.Navigator>
+			<Stack.Screen name="Home_Screen" component={TabNavigation} options={{ headerShown: false }} />
+			<Stack.Screen name="Search" component={SearchScreen} options={{ headerShown: false }} />
+		</Stack.Navigator>
+	)
 }
 
 export default LoggedNavigation

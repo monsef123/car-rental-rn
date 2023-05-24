@@ -11,11 +11,10 @@ import LineSeparator from '../../../components/LineSeparator';
 import SimpleInput from '../../../components/SimpleInput';
 import OptionSlider from './components/OptionsSlider';
 import CarTypeSelector from './components/CarTypeSelector';
-import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 import BigIconButton from '../../../components/BigIconButton';
 
 const SearchScreen = ({ navigation }) => {
-	const tabBarHeight = useBottomTabBarHeight();
+	const tabBarHeight = 0;
 	const [method, setMethod] = useState(ORDER_METHODS.DELIVERY);
 	const [carTypes, setCarTypes] = useState([]);
 
@@ -40,7 +39,7 @@ const SearchScreen = ({ navigation }) => {
 	return (
 		<>
 			<ScrollView
-				contentContainerStyle={[styles.scrollView, { paddingBottom: tabBarHeight + 40 }]}
+				contentContainerStyle={styles.scrollView}
 				bounces={false}
 				showsVerticalScrollIndicator={false}
 			>
@@ -93,7 +92,7 @@ const SearchScreen = ({ navigation }) => {
 			</ScrollView>
 			<BigIconButton
 				iconName="arrow-right"
-				style={styles.nextBtn(tabBarHeight)}
+				style={styles.nextBtn}
 				iconColor={colors.white}
 				containerColor={colors.textBlack}
 			/>
@@ -105,7 +104,8 @@ const styles = StyleSheet.create({
 	scrollView: {
 		width: "100%",
 		flexGrow: 1,
-		backgroundColor: colors.white
+		backgroundColor: colors.white,
+		paddingBottom: 40
 	},
 	container: {
 		width: "100%",
@@ -125,11 +125,11 @@ const styles = StyleSheet.create({
 		lineHeight: 18,
 		marginBottom: 10,
 	},
-	nextBtn: (tabbarheight) => ({
+	nextBtn: {
 		position: "absolute",
-		bottom: tabbarheight,
+		bottom: 60,
 		right: 20
-	})
+	}
 });
 
 export default SearchScreen
