@@ -12,6 +12,7 @@ import SimpleInput from '../../../components/SimpleInput';
 import OptionSlider from './components/OptionsSlider';
 import CarTypeSelector from './components/CarTypeSelector';
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+import BigIconButton from '../../../components/BigIconButton';
 
 const SearchScreen = ({ navigation }) => {
 	const tabBarHeight = useBottomTabBarHeight();
@@ -37,58 +38,66 @@ const SearchScreen = ({ navigation }) => {
 	}
 
 	return (
-		<ScrollView
-			contentContainerStyle={[styles.scrollView, { paddingBottom: tabBarHeight + 40 }]}
-			bounces={false}
-			showsVerticalScrollIndicator={false}
-		>
-			<SafeAreaView style={styles.container}>
-				{/** Header */}
-				<SearchScreenHeader
-					goBack={navigation.goBack}
-				/>
-				{/** Question text */}
-				<Text variant="bodyLarge" style={styles.question}>
-					{strings.recoveryMethod}
-				</Text>
-				{/** Method selector */}
-				<SearchScreenMethodSelector
-					method={method}
-					onMethodPress={onMethodPress}
-				/>
-				{/** Separator */}
-				<LineSeparator />
-				{/** Basic form */}
-				<SimpleInput
-					placeholder="Trademark"
-				/>
-				<SimpleInput
-					style={{ marginTop: 16 }}
-					label="Date de début"
-					placeholder="13/12/2023"
-				/>
-				<SimpleInput
-					style={{ marginTop: 16 }}
-					label="Date de fin"
-					placeholder="13/12/2023"
-				/>
-				<SimpleInput
-					style={{ marginTop: 16 }}
-					label="Lieu de prise en charge et de retour"
-					placeholder="Gauthier, NO92 Casablanca"
-				/>
-				{/** Car options slider */}
-				<OptionSlider
-					label="Niveau mécanique"
-				/>
-				{/** Car type selector */}
-				<CarTypeSelector
-					label="Quel type de voiture souhaitez-vous ?"
-					carTypes={carTypes}
-					onCheckboxPress={onCarTypeCheckboxPress}
-				/>
-			</SafeAreaView>
-		</ScrollView>
+		<>
+			<ScrollView
+				contentContainerStyle={[styles.scrollView, { paddingBottom: tabBarHeight + 40 }]}
+				bounces={false}
+				showsVerticalScrollIndicator={false}
+			>
+				<SafeAreaView style={styles.container}>
+					{/** Header */}
+					<SearchScreenHeader
+						goBack={navigation.goBack}
+					/>
+					{/** Question text */}
+					<Text variant="bodyLarge" style={styles.question}>
+						{strings.recoveryMethod}
+					</Text>
+					{/** Method selector */}
+					<SearchScreenMethodSelector
+						method={method}
+						onMethodPress={onMethodPress}
+					/>
+					{/** Separator */}
+					<LineSeparator />
+					{/** Basic form */}
+					<SimpleInput
+						placeholder="Trademark"
+					/>
+					<SimpleInput
+						style={{ marginTop: 16 }}
+						label="Date de début"
+						placeholder="13/12/2023"
+					/>
+					<SimpleInput
+						style={{ marginTop: 16 }}
+						label="Date de fin"
+						placeholder="13/12/2023"
+					/>
+					<SimpleInput
+						style={{ marginTop: 16 }}
+						label="Lieu de prise en charge et de retour"
+						placeholder="Gauthier, NO92 Casablanca"
+					/>
+					{/** Car options slider */}
+					<OptionSlider
+						label="Niveau mécanique"
+					/>
+					{/** Car type selector */}
+					<CarTypeSelector
+						label="Quel type de voiture souhaitez-vous ?"
+						carTypes={carTypes}
+						onCheckboxPress={onCarTypeCheckboxPress}
+					/>
+				</SafeAreaView>
+			</ScrollView>
+			<BigIconButton
+				iconName="arrow-right"
+				style={styles.nextBtn(tabBarHeight)}
+				iconColor={colors.white}
+				containerColor={colors.textBlack}
+			/>
+		</>
 	)
 }
 
@@ -116,6 +125,11 @@ const styles = StyleSheet.create({
 		lineHeight: 18,
 		marginBottom: 10,
 	},
+	nextBtn: (tabbarheight) => ({
+		position: "absolute",
+		bottom: tabbarheight,
+		right: 20
+	})
 });
 
 export default SearchScreen

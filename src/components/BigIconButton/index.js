@@ -3,16 +3,16 @@ import { StyleSheet } from 'react-native'
 import { IconButton } from "react-native-paper"
 import colors from '../../common/colors'
 
-const BigIconButton = ({ iconName, style, onPress }) => {
+const BigIconButton = ({ iconName, style, onPress, iconColor = colors.primary, containerColor = colors.bigIconBtn }) => {
 
 	return (
 		<IconButton
 			icon={iconName}
-			iconColor={colors.primary}
+			iconColor={iconColor}
 			style={[styles.container, style]}
 			size={24}
 			onPress={onPress}
-			containerColor={colors.bigIconBtn}
+			containerColor={containerColor}
 			mode='contained'
 		/>
 	)
