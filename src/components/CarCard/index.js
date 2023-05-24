@@ -3,18 +3,18 @@ import { View, Image, StyleSheet } from 'react-native'
 import { IconButton, Text, TouchableRipple } from 'react-native-paper';
 import colors from '../../common/colors';
 
-
 const CarCard = ({
 	image,
 	title,
 	rating,
 	trips,
 	price,
-	pricePerDay
+	pricePerDay,
+	onPress
 }) => {
 
 	return (
-		<TouchableRipple>
+		<TouchableRipple onPress={onPress}>
 			<View style={styles.container}>
 				<View style={styles.imgContainer}>
 					<Image source={image} style={styles.carImg} />

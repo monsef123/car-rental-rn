@@ -24,7 +24,7 @@ const SearchResultScreen = ({ navigation }) => {
 					<View style={{ width: '100%', flexShrink: 1 }}>
 						<SimpleInput
 							style={{ marginTop: 16 }}
-							label="Date de début"
+							label={strings.startDate}
 							placeholder="13/12/2023"
 						/>
 					</View>
@@ -32,7 +32,7 @@ const SearchResultScreen = ({ navigation }) => {
 					<View style={{ width: '100%', flexShrink: 1 }}>
 						<SimpleInput
 							style={{ marginTop: 16 }}
-							label="Date de fin"
+							label={strings.endDate}
 							placeholder="13/12/2023"
 						/>
 					</View>
