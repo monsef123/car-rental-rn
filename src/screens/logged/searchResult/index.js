@@ -70,14 +70,14 @@ const styles = StyleSheet.create({
 	scrollView: {
 		width: "100%",
 		flexGrow: 1,
-		backgroundColor: colors.white,
+		backgroundColor: colors.secondarySurface,
 		paddingBottom: 40
 	},
 	container: {
 		width: "100%",
 		flex: 1,
 		paddingHorizontal: 18,
-		backgroundColor: colors.white
+		backgroundColor: colors.secondarySurface
 	},
 	row: {
 		width: "100%",
