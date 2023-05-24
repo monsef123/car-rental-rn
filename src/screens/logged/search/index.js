@@ -16,16 +16,29 @@ import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 const SearchScreen = ({ navigation }) => {
 	const tabBarHeight = useBottomTabBarHeight();
 	const [method, setMethod] = useState(ORDER_METHODS.DELIVERY);
+	const [carTypes, setCarTypes] = useState([]);
 
+	/** Func: Handles order method press */
 	const onMethodPress = (value) => {
 		if (value !== method) {
 			setMethod(value);
 		}
 	}
 
+	/** Func: Handles car type checkbox press */
+	const onCarTypeCheckboxPress = (value) => {
+		let newCarTypes = [...carTypes];
+		if (carTypes.includes(value)) {
+			newCarTypes = newCarTypes.filter(item => item !== value);
+		} else {
+			newCarTypes.push(value);
+		}
+		setCarTypes(newCarTypes);
+	}
+
 	return (
 		<ScrollView
-			contentContainerStyle={[styles.scrollView, {paddingBottom: tabBarHeight}]}
+			contentContainerStyle={[styles.scrollView, { paddingBottom: tabBarHeight + 40 }]}
 			bounces={false}
 			showsVerticalScrollIndicator={false}
 		>
@@ -65,12 +78,14 @@ const SearchScreen = ({ navigation }) => {
 					placeholder="Gauthier, NO92 Casablanca"
 				/>
 				{/** Car options slider */}
-				<OptionSlider 
+				<OptionSlider
 					label="Niveau mécanique"
 				/>
 				{/** Car type selector */}
-				<CarTypeSelector 
+				<CarTypeSelector
 					label="Quel type de voiture souhaitez-vous ?"
+					carTypes={carTypes}
+					onCheckboxPress={onCarTypeCheckboxPress}
 				/>
 			</SafeAreaView>
 		</ScrollView>

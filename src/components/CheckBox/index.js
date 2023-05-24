@@ -1,18 +1,18 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, Pressable } from 'react-native'
 import colors from '../../common/colors';
 import { Text } from 'react-native-paper'
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 
-const CheckBox = ({ label, isChecked }) => {
+const CheckBox = ({ label, isChecked, onPress }) => {
 
 	return (
 		<View style={styles.container}>
-			<View style={styles.box}>
+			<Pressable style={styles.box} onPress={onPress}>
 				{isChecked && (
 					<Icon name="check-bold" size={16} />
 				)}
-			</View>
+			</Pressable>
 			<Text variant="bodyLarge" style={styles.label}>{label}</Text>
 		</View>
 	)
