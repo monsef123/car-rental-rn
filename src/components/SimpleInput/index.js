@@ -3,7 +3,7 @@ import { View, StyleSheet, TextInput } from 'react-native'
 import colors from '../../common/colors';
 import { Text } from 'react-native-paper';
 
-const SimpleInput = ({ label, placeholder, style }) => {
+const SimpleInput = ({ label, placeholder, style, keyboardType }) => {
 
 	return (
 		<View style={[styles.container, style]}>
@@ -12,6 +12,8 @@ const SimpleInput = ({ label, placeholder, style }) => {
 				style={styles.input}
 				placeholder={placeholder}
 				placeholderTextColor={colors.textOnInput}
+				keyboardType={keyboardType}
+				returnKeyType='done'
 			/>
 		</View>
 	)
