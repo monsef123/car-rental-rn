@@ -4,6 +4,7 @@ import TabBar from "../components/TabBar";
 import HomeStack from "../stacks/HomeStack";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SearchStack from "../stacks/SearchStack";
+import CheckoutStack from "../stacks/CheckoutStack";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -21,9 +22,10 @@ const TabNavigation = () => {
 
 const LoggedNavigation = () => {
 	return (
-		<Stack.Navigator>
+		<Stack.Navigator initialRouteName="Checkout">
 			<Stack.Screen name="Home_Screen" component={TabNavigation} options={{ headerShown: false }} />
 			<Stack.Screen name="Search" component={SearchStack} options={{ headerShown: false }} />
+			<Stack.Screen name="Checkout" component={CheckoutStack} options={{ headerShown: false }} />
 		</Stack.Navigator>
 	)
 }

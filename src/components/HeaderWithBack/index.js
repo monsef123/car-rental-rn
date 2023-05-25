@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
 		fontWeight: "900",
 		textTransform: "uppercase",
 		paddingTop: 5,
+		maxWidth: "90%"
 	},
 	icon: {
 		position: "relative",
