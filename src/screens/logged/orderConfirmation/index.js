@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import colors from '../../../common/colors';
 import HostDetails from './components/HostDetails';
 import { Chip, Text } from 'react-native-paper';
+import CustomChip from '../../../components/CustomChip';
 
 const OrderConfirmation = ({ navigation }) => {
 
@@ -24,9 +25,23 @@ const OrderConfirmation = ({ navigation }) => {
 			<View style={styles.carDetailsContainer}>
 				<Text variant="bodyLarge" style={styles.carTitle}>HONDA ODYSSEY 2019</Text>
 				<Image source={require("../../../images/cars/car1.png")} style={styles.carImg} />
-				<View style={styles.row}>
-					<Chip 
-						
+				<View style={[styles.row, { marginTop: 16 }]}>
+					<CustomChip
+						label="Full option"
+						iconName="cog"
+						style={{ backgroundColor: colors.textBlack }}
+						textStyle={{
+							color: colors.white
+						}}
+						iconColor={colors.white}
+					/>
+					<CustomChip
+						label="Family car"
+						style={{ backgroundColor: colors.brightBlue, marginLeft: 8 }}
+						textStyle={{
+							color: colors.textBlack,
+							fontWeight: "400"
+						}}
 					/>
 				</View>
 			</View>
@@ -51,7 +66,8 @@ const styles = StyleSheet.create({
 		borderTopRightRadius: 32,
 		paddingTop: 16,
 		flex: 1,
-		backgroundColor: colors.secondarySurface
+		backgroundColor: colors.secondarySurface,
+		paddingHorizontal: 18
 	},
 	carTitle: {
 		textAlign: "center",

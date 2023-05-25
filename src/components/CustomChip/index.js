@@ -4,27 +4,28 @@ import { Chip } from 'react-native-paper';
 import MCommunityIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import colors from '../../common/colors';
 
-const CustomChip = ({ isPressable, isSelected, onPress, iconName, label, style }) => {
+const CustomChip = ({ isPressable, isSelected, onPress, iconName, label, style, textStyle, iconColor = colors.textBlack }) => {
 
-	{/** Func: calls the onPress prop function if the chip is pressable */}
+	{/** Func: calls the onPress prop function if the chip is pressable */ }
 	const onChipPress = () => {
-		if(isPressable) {
+		if (isPressable) {
 			onPress();
 		}
 	}
 
 	return (
 		<Chip
+			disabled={!isPressable}
 			icon={
 				() => <MCommunityIcon
 					name={iconName}
-					color={isPressable && isSelected ? colors.white : colors.textBlack}
+					color={isPressable && isSelected ? colors.white : (iconColor)}
 					size={22}
 				/>
 			}
 			onPress={onChipPress}
 			style={[styles.chip(isPressable && isSelected), style]}
-			textStyle={styles.chipText(isPressable && isSelected)}
+			textStyle={[styles.chipText(isPressable && isSelected), textStyle]}
 		>
 			{label}
 		</Chip>

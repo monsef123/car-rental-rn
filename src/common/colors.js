@@ -9,7 +9,8 @@ const colors = {
 	white: "#FFFFFF",
 	textBlack: "#111111",
 	lighGray: "#EEEEEE",
-	brightGreen: "#AFE67F"
+	brightGreen: "#AFE67F",
+	brightBlue: "#AEDFE0",
 }
 
 export default colors;
