@@ -15,6 +15,7 @@ const CheckoutVerification = ({ navigation }) => {
 
 	const onSubmitVerification = () => {
 		// TODO: Add logic here
+		navigation.navigate("checkout_add_card");
 	}
 
 	return (

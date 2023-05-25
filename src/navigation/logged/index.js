@@ -22,7 +22,7 @@ const TabNavigation = () => {
 
 const LoggedNavigation = () => {
 	return (
-		<Stack.Navigator initialRouteName="Checkout">
+		<Stack.Navigator>
 			<Stack.Screen name="Home_Screen" component={TabNavigation} options={{ headerShown: false }} />
 			<Stack.Screen name="Search" component={SearchStack} options={{ headerShown: false }} />
 			<Stack.Screen name="Checkout" component={CheckoutStack} options={{ headerShown: false }} />

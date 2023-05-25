@@ -6,7 +6,7 @@ import strings from '../../../../common/strings';
 import { TouchableRipple } from 'react-native-paper';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-const OrderCard = () => {
+const OrderCard = ({ onSubmit }) => {
 
 	return (
 		<View style={styles.container}>
@@ -32,7 +32,7 @@ const OrderCard = () => {
 			/>
 			<Text variant="labelLarge" style={styles.label}>Total price</Text>
 			<Text variant="bodyLarge" style={styles.totalPriceText}>1.090 Dhs</Text>
-			<TouchableRipple style={{ marginTop: 16 }} rippleColor={colors.white}>
+			<TouchableRipple style={{ marginTop: 16 }} rippleColor={colors.white} onPress={onSubmit}>
 				<View style={styles.nextBtn}>
 					<Text style={styles.nextBtnText}>Passer à la caisse</Text>
 					<Icon name="arrow-right" color={colors.white} size={22} />

@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 const CheckoutStack = () => {
 
 	return (
-		<Stack.Navigator initialRouteName='checkout_confirmation'>
+		<Stack.Navigator initialRouteName='checkout_verification'>
 			<Stack.Screen name="checkout_verification" component={CheckoutVerification} options={{ headerShown: false }} />
 			<Stack.Screen name="checkout_add_card" component={CheckoutAddCard} options={{ headerShown: false, contentStyle: { backgroundColor: colors.secondarySurface } }} />
 			<Stack.Screen name="checkout_confirmation" component={CheckoutConfirmation} options={{ headerShown: false, contentStyle: { backgroundColor: colors.secondarySurface } }} />

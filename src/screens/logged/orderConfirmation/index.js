@@ -6,7 +6,6 @@ import colors from '../../../common/colors';
 import HostDetails from './components/HostDetails';
 import { Text } from 'react-native-paper';
 import CustomChip from '../../../components/CustomChip';
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import CarFeatures from './components/Features';
 import OrderCard from './components/OrderCard';
 
@@ -48,7 +47,9 @@ const OrderConfirmation = ({ navigation }) => {
 					/>
 				</View>
 				<CarFeatures />
-				<OrderCard />
+				<OrderCard
+					onSubmit={() => navigation.navigate("Checkout")}
+				/>
 			</View>
 		</ScrollView>
 	)

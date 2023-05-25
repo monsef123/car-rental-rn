@@ -10,6 +10,10 @@ import { Text } from 'react-native-paper'
 
 const CheckoutAddCard = ({ navigation }) => {
 
+	const onCheckoutPress = () => {
+		navigation.navigate("checkout_confirmation");
+	}
+
 	return (
 		<>
 			<ScrollView
@@ -54,7 +58,7 @@ const CheckoutAddCard = ({ navigation }) => {
 					style={{ paddingHorizontal: 0, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.textBlack, flexShrink: 1 }}
 					textStyle={{ fontSize: 16 }}
 				/>
-				<TouchableOpacity style={styles.checkoutBtn}>
+				<TouchableOpacity style={styles.checkoutBtn} onPress={onCheckoutPress}>
 					<Text style={{fontSize: 16, color: colors.white}}>Checkout</Text>
 				</TouchableOpacity>
 			</View>
