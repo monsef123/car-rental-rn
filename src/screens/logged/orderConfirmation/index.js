@@ -8,6 +8,7 @@ import { Text } from 'react-native-paper';
 import CustomChip from '../../../components/CustomChip';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import CarFeatures from './components/Features';
+import OrderCard from './components/OrderCard';
 
 const OrderConfirmation = ({ navigation }) => {
 
@@ -47,6 +48,7 @@ const OrderConfirmation = ({ navigation }) => {
 					/>
 				</View>
 				<CarFeatures />
+				<OrderCard />
 			</View>
 		</ScrollView>
 	)
@@ -87,13 +89,6 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "flex-start"
 	},
-	featuresTitle: {
-		fontWeight: "600",
-		marginTop: 24
-	},
-	featureLabel: {
-		marginLeft: 12,
-	}
 });
 
 export default OrderConfirmation
