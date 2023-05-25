@@ -7,9 +7,16 @@ import strings from "../../../common/strings";
 import colors from "../../../common/colors";
 import ContainedButton from "../../../components/ContainedButton";
 import BigIconButton from "../../../components/BigIconButton";
+import { useDispatch } from "react-redux";
+import { LOGIN } from "../../../redux/account/types";
 
 const LoginOtp = ({ navigation }) => {
 	const [otp, setOtp] = useState("");
+	const dispatch = useDispatch();
+
+	const handleSubmit = () => {
+		dispatch({ type: LOGIN });
+	}
 
 	return (
 		<GuestScreenWrapper>
@@ -29,6 +36,7 @@ const LoginOtp = ({ navigation }) => {
 			<ContainedButton
 				style={{ marginTop: 24 }}
 				iconName="arrow-right"
+				onPress={handleSubmit}
 				disabled={!otp}
 			>
 				{strings.confirm}
