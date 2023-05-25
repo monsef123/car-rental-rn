@@ -11,6 +11,7 @@ const colors = {
 	lighGray: "#EEEEEE",
 	brightGreen: "#AFE67F",
 	brightBlue: "#AEDFE0",
+	contentSecondary: "#454745"
 }
 
 export default colors;

@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center"
 	},
 	label: {
-		marginLeft: 12
+		marginLeft: 12,
 	}
 });
 
