@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './src/navigation';
 import { MD3LightTheme as DefaultTheme, ThemeProvider } from 'react-native-paper';
 import colors from './src/common/colors';
+import { StatusBar } from 'react-native';
 
 const theme = {
 	...DefaultTheme,
@@ -16,6 +17,7 @@ const theme = {
 const App = () => {
 	return (
 		<ThemeProvider theme={theme}>
+			<StatusBar backgroundColor="transparent" translucent barStyle="dark-content" />
 			<NavigationContainer>
 				<Navigation />
 			</NavigationContainer>
