@@ -2,12 +2,13 @@ import React from 'react'
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import { Text } from 'react-native-paper';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import colors from '../../common/colors';
 
 const HeaderWithBack = ({ goBack, title }) => {
 	return (
-		<TouchableOpacity onPress={goBack}>
+		<TouchableOpacity onPress={goBack} style={{marginVertical: 20}}>
 			<View style={styles.container}>
-				<Icon name="chevron-left" size={40} style={styles.icon} />
+				<Icon name="chevron-left" size={40} style={styles.icon} color={colors.textBlack} />
 				<Text variant="titleLarge" style={styles.title}>{title}</Text>
 			</View>
 		</TouchableOpacity>
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
 	title: {
 		fontWeight: "900",
 		textTransform: "uppercase",
-		paddingTop: 5,
+		paddingTop: 8,
 		maxWidth: "90%"
 	},
 	icon: {

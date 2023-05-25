@@ -73,7 +73,8 @@ const styles = StyleSheet.create({
 		paddingTop: 16,
 		flex: 1,
 		backgroundColor: colors.secondarySurface,
-		paddingHorizontal: 18
+		paddingHorizontal: 18,
+		marginTop: 30,
 	},
 	carTitle: {
 		textAlign: "center",

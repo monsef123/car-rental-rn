@@ -53,13 +53,16 @@ const CheckoutAddCard = ({ navigation }) => {
 				</View>
 			</ScrollView>
 			<View style={styles.footerContainer}>
-				<CustomChip
+				{/* <CustomChip
 					label="Ajouter cette carte"
 					style={{ paddingHorizontal: 0, backgroundColor: colors.white, borderWidth: 1, borderColor: colors.textBlack, flexShrink: 1 }}
 					textStyle={{ fontSize: 16 }}
-				/>
+				/> */}
+				<TouchableOpacity style={[styles.checkoutBtn, { backgroundColor: colors.white, borderWidth: 1, borderColor: colors.textBlack, flexShrink: 1 }]} onPress={onCheckoutPress}>
+					<Text style={{ fontSize: 16, color: colors.textBlack, fontWeight: "600" }} variant="bodyLarge">Ajouter cette carte</Text>
+				</TouchableOpacity>
 				<TouchableOpacity style={styles.checkoutBtn} onPress={onCheckoutPress}>
-					<Text style={{fontSize: 16, color: colors.white}}>Checkout</Text>
+					<Text style={{ fontSize: 16, color: colors.white, fontWeight: "900" }} variant="bodyLarge">Checkout</Text>
 				</TouchableOpacity>
 			</View>
 		</>

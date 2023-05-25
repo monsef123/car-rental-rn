@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
 		fontWeight: "600",
 		lineHeight: 16,
 		fontSize: 16,
-		marginTop: 16
+		marginTop: 16,
+		color: colors.textBlack
 	},
 	nextBtn: {
 		width: "80%",

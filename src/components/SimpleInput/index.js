@@ -7,7 +7,7 @@ const SimpleInput = ({ label, placeholder, style, keyboardType }) => {
 
 	return (
 		<View style={[styles.container, style]}>
-			{!!label && <Text variant="labelLarge" style={styles.label}>{label}</Text>}
+			{!!label && <Text variant="bodyLarge" style={styles.label}>{label}</Text>}
 			<TextInput
 				style={styles.input}
 				placeholder={placeholder}
@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
 	label: {
 		fontSize: 14,
 		color: "#333",
-		fontWeight: "400"
+		fontWeight: "400",
+		
 	}
 });
 export default SimpleInput

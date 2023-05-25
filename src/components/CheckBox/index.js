@@ -11,7 +11,7 @@ const CheckBox = ({ label, isChecked, onPress }) => {
 			<TouchableRipple onPress={onPress}>
 				<View style={styles.box}>
 					{isChecked && (
-						<Icon name="check-bold" size={16} />
+						<Icon name="check-bold" size={16} color={colors.textBlack} />
 					)}
 				</View>
 			</TouchableRipple>

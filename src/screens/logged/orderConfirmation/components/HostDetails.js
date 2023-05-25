@@ -11,7 +11,7 @@ const HostDetails = () => {
 			<View style={styles.row}>
 				<Avatar.Text size={48} label="aac" labelStyle={styles.avatarLabel} />
 				<View style={styles.hostTextContainer}>
-					<Text variant="bodyLarge" style={{ fontWeight: "500" }}>Casa car rentals</Text>
+					<Text variant="bodyLarge" style={{ fontWeight: "600", color: colors.textBlack }}>Casa car rentals</Text>
 					<View style={[styles.row, { marginTop: 0 }]}>
 						<Text variant="bodySmall" style={{ lineHeight: 16 }}>5.0</Text>
 						<IconButton
@@ -22,7 +22,7 @@ const HostDetails = () => {
 						/>
 						<Text variant="bodySmall" style={{ lineHeight: 16 }}>(705 trips)</Text>
 					</View>
-					<Text variant="labelMedium" style={{ fontWeight: "300" }}>Typically responds within 1 minute</Text>
+					<Text variant="bodyLarge" style={{ fontWeight: "100", fontSize: 12 }}>Typically responds within 1 minute</Text>
 				</View>
 			</View>
 		</>

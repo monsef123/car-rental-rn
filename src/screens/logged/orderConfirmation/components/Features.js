@@ -2,11 +2,12 @@ import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import { Text } from 'react-native-paper'
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
+import colors from '../../../../common/colors'
 
 const Feature = ({ iconName, label }) => {
 	return (
 		<View style={[styles.row, { marginTop: 26 }]}>
-			<Icon name={iconName} size={22} />
+			<Icon name={iconName} size={22} color={colors.textBlack} />
 			<Text style={styles.featureLabel}>{label}</Text>
 		</View>
 	)
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
 		justifyContent: "flex-start"
 	},
 	featuresTitle: {
-		fontWeight: "600",
+		fontWeight: "900",
 
 	},
 	featureLabel: {

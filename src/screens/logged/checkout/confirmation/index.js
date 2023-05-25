@@ -28,12 +28,12 @@ const CheckoutConfirmation = ({ navigation }) => {
 				</SafeAreaView>
 				<View style={{ paddingHorizontal: 18 }}>
 					<View style={styles.containerCard}>
-						<Text style={{ fontWeight: "500", fontSize: 16 }}>Conditions d'utilisation</Text>
+						<Text style={{ fontWeight: "900", fontSize: 16 }}>Conditions d'utilisation</Text>
 						<View style={styles.checkboxContainer}>
 							<TouchableRipple onPress={() => setIsChecked(!isChecked)}>
 								<View style={styles.box}>
 									{isChecked && (
-										<Icon name="check-bold" size={16} />
+										<Icon name="check-bold" size={16} color={colors.textBlack} />
 									)}
 								</View>
 							</TouchableRipple>
@@ -63,13 +63,13 @@ const CheckoutConfirmation = ({ navigation }) => {
 							label={strings.returnLocation}
 							placeholder="Gauthier, NO92 Casablanca"
 						/>
-						<Text variant="labelLarge" style={styles.labelSecond}>Total price</Text>
+						<Text variant="bodyLarge" style={styles.labelSecond}>Total price</Text>
 						<Text variant="bodyLarge" style={styles.totalPriceText}>1.090 Dhs</Text>
 					</View>
 				</View>
 			</ScrollView>
 			<TouchableOpacity style={styles.payBtn}>
-				<Text style={styles.payBtnText}>Payer <Text style={[styles.payBtnText, {fontWeight: "600"}]}>1090 Dhs</Text></Text>
+				<Text style={styles.payBtnText}>Payer <Text style={[styles.payBtnText, { fontWeight: "900" }]}>1090 Dhs</Text></Text>
 			</TouchableOpacity>
 		</>
 	)
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
 		marginTop: 16
 	},
 	totalPriceText: {
-		fontWeight: "600",
+		fontWeight: "900",
 		lineHeight: 16,
 		fontSize: 16,
 		marginTop: 16
