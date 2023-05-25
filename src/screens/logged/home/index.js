@@ -10,6 +10,10 @@ import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs'
 const HomeScreen = ({ navigation }) => {
 	const tabBarHeight = useBottomTabBarHeight();
 
+	const onCarPress = () => {
+		navigation.navigate("Search", {screen: "search_confirmation"});
+	}
+
 	return (
 		<ScrollView
 			contentContainerStyle={[styles.scrollView, { paddingBottom: tabBarHeight + 40 }]}
@@ -29,6 +33,7 @@ const HomeScreen = ({ navigation }) => {
 						trips="16"
 						price="1.090"
 						pricePerDay="300"
+						onPress={onCarPress}
 					/>
 					<CarCard
 						image={require("../../../images/cars/car2.png")}
@@ -37,6 +42,7 @@ const HomeScreen = ({ navigation }) => {
 						trips="16"
 						price="1.090"
 						pricePerDay="300"
+						onPress={onCarPress}
 					/>
 					<CarCard
 						image={require("../../../images/cars/car1.png")}
@@ -45,6 +51,7 @@ const HomeScreen = ({ navigation }) => {
 						trips="16"
 						price="1.090"
 						pricePerDay="300"
+						onPress={onCarPress}
 					/>
 				</View>
 			</SafeAreaView>

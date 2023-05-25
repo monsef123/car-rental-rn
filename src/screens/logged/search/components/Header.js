@@ -2,6 +2,7 @@ import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import { IconButton, Text } from 'react-native-paper';
 import strings from '../../../../common/strings';
+import colors from '../../../../common/colors';
 
 const SearchScreenHeader = ({ goBack }) => {
 	return (
@@ -10,6 +11,7 @@ const SearchScreenHeader = ({ goBack }) => {
 			<IconButton
 				icon="close"
 				onPress={goBack}
+				iconColor={colors.textBlack}
 			/>
 		</View>
 	)
@@ -21,7 +23,7 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "space-between",
-		paddingVertical: 10
+		paddingVertical: 20
 	},
 	title: {
 		fontWeight: "900",
