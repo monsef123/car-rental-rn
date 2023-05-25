@@ -4,7 +4,7 @@ import HeaderWithBack from '../../../components/HeaderWithBack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import colors from '../../../common/colors';
 import HostDetails from './components/HostDetails';
-import { Text } from 'react-native-paper';
+import { Chip, Text } from 'react-native-paper';
 
 const OrderConfirmation = ({ navigation }) => {
 
@@ -24,6 +24,11 @@ const OrderConfirmation = ({ navigation }) => {
 			<View style={styles.carDetailsContainer}>
 				<Text variant="bodyLarge" style={styles.carTitle}>HONDA ODYSSEY 2019</Text>
 				<Image source={require("../../../images/cars/car1.png")} style={styles.carImg} />
+				<View style={styles.row}>
+					<Chip 
+						
+					/>
+				</View>
 			</View>
 		</ScrollView>
 	)
@@ -34,11 +39,9 @@ const styles = StyleSheet.create({
 		width: "100%",
 		flexGrow: 1,
 		backgroundColor: colors.lighGray,
-		// paddingBottom: 40
 	},
 	container: {
 		width: "100%",
-		// flex: 1,
 		paddingHorizontal: 18,
 		backgroundColor: colors.lighGray
 	},
@@ -58,6 +61,12 @@ const styles = StyleSheet.create({
 		marginTop: 30,
 		width: "50%",
 		resizeMode: "contain"
+	},
+	row: {
+		width: "100%",
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "flex-start"
 	}
 });
 
