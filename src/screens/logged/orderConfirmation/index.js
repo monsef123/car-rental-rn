@@ -4,8 +4,10 @@ import HeaderWithBack from '../../../components/HeaderWithBack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import colors from '../../../common/colors';
 import HostDetails from './components/HostDetails';
-import { Chip, Text } from 'react-native-paper';
+import { Text } from 'react-native-paper';
 import CustomChip from '../../../components/CustomChip';
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import CarFeatures from './components/Features';
 
 const OrderConfirmation = ({ navigation }) => {
 
@@ -44,6 +46,7 @@ const OrderConfirmation = ({ navigation }) => {
 						}}
 					/>
 				</View>
+				<CarFeatures />
 			</View>
 		</ScrollView>
 	)
@@ -83,6 +86,13 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		alignItems: "center",
 		justifyContent: "flex-start"
+	},
+	featuresTitle: {
+		fontWeight: "600",
+		marginTop: 24
+	},
+	featureLabel: {
+		marginLeft: 12,
 	}
 });
 
