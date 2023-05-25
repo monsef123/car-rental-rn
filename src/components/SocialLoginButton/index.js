@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
 	},
 	label: {
 		fontSize: 16,
-		fontWeight: "400"
+		fontWeight: "400",
+		color: colors.textBlack
 	},
 	icon: {
 		width: 30, height: 30, resizeMode: "contain",

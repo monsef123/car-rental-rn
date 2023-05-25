@@ -26,7 +26,7 @@ const LoginContainer = ({
 	return (
 		<GuestScreenWrapper>
 			<StatusBar barStyle="light-content" />
-			<Text variant="bodyLarge">{strings.enterPhoneNumber}</Text>
+			<Text variant="bodyLarge" style={{fontSize: 20, fontWeight: "400"}}>{strings.enterPhoneNumber}</Text>
 			<View style={styles.inputContainer}>
 				<SelectDropdown
 					data={countries}
