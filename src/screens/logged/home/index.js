@@ -12,7 +12,7 @@ const HomeScreen = ({ navigation }) => {
 
 	return (
 		<ScrollView
-			contentContainerStyle={[styles.scrollView, { paddingBottom: tabBarHeight }]}
+			contentContainerStyle={[styles.scrollView, { paddingBottom: tabBarHeight + 40 }]}
 			bounces={false}
 			showsVerticalScrollIndicator={false
 			}>
