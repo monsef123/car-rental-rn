@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, ScrollView, View } from 'react-native'
+import { StyleSheet, ScrollView, View, TouchableOpacity } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import HeaderWithBack from '../../../../components/HeaderWithBack';
 import colors from '../../../../common/colors';
@@ -14,59 +14,64 @@ const CheckoutConfirmation = ({ navigation }) => {
 
 
 	return (
-		<ScrollView
-			contentContainerStyle={styles.scrollView}
-			bounces={false}
-			showsVerticalScrollIndicator={false}
-		>
-			<SafeAreaView style={styles.container}>
-				<HeaderWithBack
-					goBack={navigation.goBack}
-					title="CHECKOUT"
-				/>
-			</SafeAreaView>
-			<View style={{ paddingHorizontal: 18 }}>
-				<View style={styles.containerCard}>
-					<Text style={{ fontWeight: "500", fontSize: 16 }}>Conditions d'utilisation</Text>
-					<View style={styles.checkboxContainer}>
-						<TouchableRipple onPress={() => setIsChecked(!isChecked)}>
-							<View style={styles.box}>
-								{isChecked && (
-									<Icon name="check-bold" size={16} />
-								)}
-							</View>
-						</TouchableRipple>
-						<Text variant="bodyLarge" style={styles.label}>
-							En vous connectant, il est entendu que vous reconnaissez et acceptez les termes et conditions générales d'utilisation.
-						</Text>
-					</View>
-				</View>
-				<View style={[styles.containerCard, { marginTop: 24 }]}>
-					<View style={styles.row}>
-						<View style={{ width: '100%', flexShrink: 1 }}>
-							<SimpleInput
-								label={strings.startDate}
-								placeholder="13/12/2023"
-							/>
-						</View>
-						<View style={{ width: 16 }} />
-						<View style={{ width: '100%', flexShrink: 1 }}>
-							<SimpleInput
-								label={strings.endDate}
-								placeholder="13/12/2023"
-							/>
-						</View>
-					</View>
-					<SimpleInput
-						style={{ marginTop: 16 }}
-						label={strings.returnLocation}
-						placeholder="Gauthier, NO92 Casablanca"
+		<>
+			<ScrollView
+				contentContainerStyle={styles.scrollView}
+				bounces={false}
+				showsVerticalScrollIndicator={false}
+			>
+				<SafeAreaView style={styles.container}>
+					<HeaderWithBack
+						goBack={navigation.goBack}
+						title="CHECKOUT"
 					/>
-					<Text variant="labelLarge" style={styles.labelSecond}>Total price</Text>
-					<Text variant="bodyLarge" style={styles.totalPriceText}>1.090 Dhs</Text>
+				</SafeAreaView>
+				<View style={{ paddingHorizontal: 18 }}>
+					<View style={styles.containerCard}>
+						<Text style={{ fontWeight: "500", fontSize: 16 }}>Conditions d'utilisation</Text>
+						<View style={styles.checkboxContainer}>
+							<TouchableRipple onPress={() => setIsChecked(!isChecked)}>
+								<View style={styles.box}>
+									{isChecked && (
+										<Icon name="check-bold" size={16} />
+									)}
+								</View>
+							</TouchableRipple>
+							<Text variant="bodyLarge" style={styles.label}>
+								En vous connectant, il est entendu que vous reconnaissez et acceptez les termes et conditions générales d'utilisation.
+							</Text>
+						</View>
+					</View>
+					<View style={[styles.containerCard, { marginTop: 24 }]}>
+						<View style={styles.row}>
+							<View style={{ width: '100%', flexShrink: 1 }}>
+								<SimpleInput
+									label={strings.startDate}
+									placeholder="13/12/2023"
+								/>
+							</View>
+							<View style={{ width: 16 }} />
+							<View style={{ width: '100%', flexShrink: 1 }}>
+								<SimpleInput
+									label={strings.endDate}
+									placeholder="13/12/2023"
+								/>
+							</View>
+						</View>
+						<SimpleInput
+							style={{ marginTop: 16 }}
+							label={strings.returnLocation}
+							placeholder="Gauthier, NO92 Casablanca"
+						/>
+						<Text variant="labelLarge" style={styles.labelSecond}>Total price</Text>
+						<Text variant="bodyLarge" style={styles.totalPriceText}>1.090 Dhs</Text>
+					</View>
 				</View>
-			</View>
-		</ScrollView>
+			</ScrollView>
+			<TouchableOpacity style={styles.payBtn}>
+				<Text style={styles.payBtnText}>Payer <Text style={[styles.payBtnText, {fontWeight: "600"}]}>1090 Dhs</Text></Text>
+			</TouchableOpacity>
+		</>
 	)
 }
 
@@ -134,6 +139,22 @@ const styles = StyleSheet.create({
 		fontSize: 16,
 		marginTop: 16
 	},
+	payBtn: {
+		width: "90%",
+		position: "absolute",
+		bottom: 40,
+		left: "5%",
+		backgroundColor: colors.textBlack,
+		height: 44,
+		borderRadius: 50,
+		alignItems: "center",
+		justifyContent: "center"
+	},
+	payBtnText: {
+		fontSize: 16,
+		color: colors.white,
+		fontWeight: "400"
+	}
 });
 
 export default CheckoutConfirmation
