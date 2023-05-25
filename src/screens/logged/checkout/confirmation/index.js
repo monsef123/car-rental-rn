@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, ScrollView, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import HeaderWithBack from '../../../../components/HeaderWithBack';
@@ -6,8 +6,12 @@ import colors from '../../../../common/colors';
 import { Text, TouchableRipple } from 'react-native-paper';
 import CheckBox from '../../../../components/CheckBox';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
+import SimpleInput from '../../../../components/SimpleInput';
+import strings from '../../../../common/strings';
 
 const CheckoutConfirmation = ({ navigation }) => {
+	const [isChecked, setIsChecked] = useState(false);
+
 
 	return (
 		<ScrollView
@@ -25,17 +29,41 @@ const CheckoutConfirmation = ({ navigation }) => {
 				<View style={styles.containerCard}>
 					<Text style={{ fontWeight: "500", fontSize: 16 }}>Conditions d'utilisation</Text>
 					<View style={styles.checkboxContainer}>
-						<TouchableRipple>
+						<TouchableRipple onPress={() => setIsChecked(!isChecked)}>
 							<View style={styles.box}>
-								{/* {isChecked && ( */}
-								<Icon name="check-bold" size={16} />
-								{/* )} */}
+								{isChecked && (
+									<Icon name="check-bold" size={16} />
+								)}
 							</View>
 						</TouchableRipple>
 						<Text variant="bodyLarge" style={styles.label}>
 							En vous connectant, il est entendu que vous reconnaissez et acceptez les termes et conditions générales d'utilisation.
 						</Text>
 					</View>
+				</View>
+				<View style={[styles.containerCard, { marginTop: 24 }]}>
+					<View style={styles.row}>
+						<View style={{ width: '100%', flexShrink: 1 }}>
+							<SimpleInput
+								label={strings.startDate}
+								placeholder="13/12/2023"
+							/>
+						</View>
+						<View style={{ width: 16 }} />
+						<View style={{ width: '100%', flexShrink: 1 }}>
+							<SimpleInput
+								label={strings.endDate}
+								placeholder="13/12/2023"
+							/>
+						</View>
+					</View>
+					<SimpleInput
+						style={{ marginTop: 16 }}
+						label={strings.returnLocation}
+						placeholder="Gauthier, NO92 Casablanca"
+					/>
+					<Text variant="labelLarge" style={styles.labelSecond}>Total price</Text>
+					<Text variant="bodyLarge" style={styles.totalPriceText}>1.090 Dhs</Text>
 				</View>
 			</View>
 		</ScrollView>
@@ -87,7 +115,25 @@ const styles = StyleSheet.create({
 		flexShrink: 1,
 		color: colors.contentSecondary,
 		fontSize: 16
-	}
+	},
+	row: {
+		width: "100%",
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "space-between"
+	},
+	labelSecond: {
+		fontSize: 14,
+		color: "#333",
+		fontWeight: "400",
+		marginTop: 16
+	},
+	totalPriceText: {
+		fontWeight: "600",
+		lineHeight: 16,
+		fontSize: 16,
+		marginTop: 16
+	},
 });
 
 export default CheckoutConfirmation
