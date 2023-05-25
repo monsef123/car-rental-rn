@@ -1,5 +1,5 @@
 import React from "react";
-import { StatusBar, StyleSheet } from "react-native";
+import { BackHandler, StatusBar, StyleSheet } from "react-native";
 import GuestScreenWrapper from "../components/GuestScreenWrapper";
 import { Text, IconButton } from "react-native-paper";
 import { View, TextInput } from "react-native";
@@ -86,6 +86,7 @@ const LoginContainer = ({
 			<BigIconButton
 				iconName="arrow-left"
 				style={{ marginTop: 22 }}
+				onPress={BackHandler.exitApp}
 			/>
 		</GuestScreenWrapper>
 	)
