@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: colors.secondarySurface,
 		paddingHorizontal: 18,
-		marginTop: 30,
+		// marginTop: 30,
 	},
 	carTitle: {
 		textAlign: "center",

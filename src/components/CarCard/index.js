@@ -38,7 +38,7 @@ const CarCard = ({
 				</View>
 				<View style={[styles.row, { marginTop: 16 }]}>
 					<Text variant="bodySmall" style={styles.captionText}>{pricePerDay} Dhs / jours</Text>
-					<Text variant="bodyLarge" style={[styles.carName, {fontWeight: "900"}]}>{price} Dhs</Text>
+					<Text variant="bodyLarge" style={[styles.carName, {fontWeight: "600"}]}>{price} Dhs</Text>
 				</View>
 			</View>
 		</TouchableRipple >

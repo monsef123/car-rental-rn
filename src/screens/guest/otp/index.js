@@ -21,7 +21,7 @@ const LoginOtp = ({ navigation }) => {
 	return (
 		<GuestScreenWrapper>
 			<StatusBar barStyle="light-content" />
-			<Text variant="bodyLarge" style={{fontSize: 20, fontWeight: "400"}}>{strings.enterOtpSentTo("0632396557")}</Text>
+			<Text variant="bodyLarge" style={{fontSize: 16, fontWeight: "400"}}>{strings.enterOtpSentTo("0632396557")}</Text>
 			<View style={styles.inputContainer}>
 				<TextInput
 					value={otp}

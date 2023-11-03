@@ -22,7 +22,7 @@ const HostDetails = () => {
 						/>
 						<Text variant="bodySmall" style={{ lineHeight: 16 }}>(705 trips)</Text>
 					</View>
-					<Text variant="bodyLarge" style={{ fontWeight: "100", fontSize: 12 }}>Typically responds within 1 minute</Text>
+					<Text variant="bodyLarge" style={{ fontWeight: "300", fontSize: 12 }}>Typically responds within 1 minute</Text>
 				</View>
 			</View>
 		</>
